@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: #effafa;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.headerDesktop {
+  display: none;
+}
+
+.job {
+  font-weight: 700;
+}
+
+.jobDescription {
+  font-weight: 700;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  margin: auto;
+  position: relative;
+}
+
+.search .clear {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.search .searchTitles {
+  width: 91vw;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  gap: 10px;
+  display: none;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.search .searchTitles .searchSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.search .searchTitles .button-search {
+  background-color: #eef6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.search .searchTitles .btn {
+  background-color: #5ba4a4;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search .searchTitles p {
+  font-weight: 700;
+  background-color: #eef6f6;
+  color: #5ba4a4;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.cardsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 60px;
+  gap: 30px;
+}
+
+.cardGreenBackground {
+  margin: 0;
+  padding: 0;
+  width: 91vw;
+  background-color: #5ba4a4;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.cardWhiteBackground {
+  margin: 0;
+  padding: 0;
+  width: 91vw;
+  background-color: white;
+  margin: auto;
+}
+
+.cardMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 89vw;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 1px 1px white;
+          box-shadow: 1px 1px 1px 1px white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cardMain .image-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cardMainNewFeatured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 90vw;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 1px 1px white;
+          box-shadow: 1px 1px 1px 1px white;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cardMainNewFeatured .image-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.image {
+  width: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  top: -10%;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.topTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.topTitle .featured {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.topTitle .new {
+  background-color: #5ba4a4;
+  color: white;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.topTitle .jobDescription {
+  color: #5ba4a4;
+}
+
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-color: gray;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.details p {
+  opacity: 0.5;
+}
+
+.abilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.abilities p {
+  color: #5ba4a4;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.abilities .languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.abilities .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.abilities button {
+  background-color: #eef6f6;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.abilities button:hover {
+  background-color: #5ba4a4;
+}
+
+.abilities button:hover p {
+  color: #eef6f6;
+}
+
+.option, .searchOptions {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 740px) {
+  .cardMainNewFeatured {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-right: 0;
+  }
+  .cardMainNewFeatured .image-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cardMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cardMain .image-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .details {
+    border: none;
+  }
+  .details p {
+    font-size: 22px;
+  }
+  .image {
+    position: relative;
+    width: 90px;
+    height: 90px;
+  }
+  .abilities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .abilities .searchOptions {
+    height: 20%;
+  }
+  .headerDesktop {
+    display: block;
+  }
+  .headerMobile {
+    display: none;
+  }
+}
+
+.option, .searchOptions {
+  font-size: 20px;
+}
+
+.job {
+  font-size: 25px;
+}
+
+.jobDescription {
+  font-size: 22px;
+}
+
+.title {
+  gap: 20px;
+}
+
+.clear {
+  font-size: 20px;
+  color: gray;
+  font-weight: 700;
+}
+
+.clear:hover {
+  color: #5ba4a4;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+/*# sourceMappingURL=style.css.map */

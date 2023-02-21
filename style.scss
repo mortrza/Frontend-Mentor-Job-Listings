@@ -1,0 +1,331 @@
+@mixin margin-padding{
+    margin: 0;
+    padding: 0;
+}
+@mixin flex-direction{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin width-height{
+    width: 100vw;
+    height: 100vh;
+}
+@mixin flex-content{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin flex-align{
+    display: flex;
+    align-items: center;
+}
+@mixin padding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@mixin padding-left-right{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@mixin padding-left-right-5{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+@mixin transform{
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin font-weight{
+    font-weight: 700;
+}
+@mixin gap{
+    gap:10px;
+}
+@mixin gap-20{
+    gap: 20px;
+}
+@mixin btn-fontSize{
+    font-size: 20px;
+}
+@mixin p-fontSize{
+    font-size: 22px;
+}
+@mixin job-fontSize{
+    font-size: 25px;
+}
+@mixin btn-border-radius{
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+@mixin border-radius{
+    border-radius: 5px;
+}
+@mixin cursor-pointer{
+    cursor: pointer;
+}
+@mixin padding-2{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+*{
+    @include margin-padding();
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+    @include width-height();
+    background-color:  hsl(180, 52%, 96%);
+}
+.container{
+@include width-height();
+}
+.headerDesktop{
+    display: none;
+}
+.job{
+    @include font-weight();
+}
+.jobDescription{
+    @include font-weight();
+}
+.search{
+    @include flex-align();
+    justify-content: space-between;
+    @include gap();
+    margin: auto;
+    position: relative;
+    .clear{
+        border: none;
+        background-color: white;
+        @include cursor-pointer();
+        margin-right: 20px;
+    }
+    .searchTitles{
+        width: 91vw;
+        background-color: white;
+        @include flex-content();
+        margin: auto;
+        @include gap();
+        display: none;
+        position: absolute;
+        top:-40px;
+        @include transform();
+        .searchSection{ 
+            @include flex-wrap(); 
+            padding-left: 20px;
+            @include padding();
+            @include gap();
+        }
+        .button-search{
+            background-color: hsl(180, 31%, 95%);
+            display: flex;
+            @include gap(); 
+        }
+
+        .btn{
+            background-color: hsl(180, 29%, 50%);
+            border:none;
+            @include btn-border-radius();
+            padding: 5px;
+            @include cursor-pointer();
+        }
+        p{
+            @include font-weight();
+            background-color:  hsl(180, 31%, 95%);
+            color: hsl(180, 29%, 50%);
+            padding: 5px;
+            display: flex; 
+            gap: 5px;
+            @include btn-fontSize();
+        }
+    }
+}
+.cardsContainer{
+    @include flex-direction();
+    padding-top: 60px;
+    gap:30px;
+
+}
+.cardGreenBackground{
+    @include margin-padding();
+    width: 91vw;
+    background-color: hsl(180, 29%, 50%);
+    @include border-radius();
+    margin: auto;
+}
+.cardWhiteBackground{
+    @include margin-padding();
+    width: 91vw;
+    background-color: white;
+    margin: auto;
+}
+.cardMain{
+    @include flex-direction();
+    @include gap-20();
+    position: relative;
+    width: 89vw;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px white;
+    @include padding();
+    .image-details{
+    @include flex-direction();
+    }  
+}
+.cardMainNewFeatured{
+    @include flex-direction();
+    @include gap-20();
+    position: relative;
+    width: 90vw;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px white;
+    margin: auto;
+    @include padding();
+    .image-details{
+    @include flex-direction();
+    }  
+}
+.image{
+    width: 40px;
+    @include padding-left-right();
+    position: absolute;
+    top: -10%;
+}
+.title{
+    @include flex-direction();
+    @include gap();
+    @include padding-left-right();
+}
+.topTitle{
+    @include flex-align();
+    @include gap();
+    .featured{
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        @include padding-left-right-5();
+        @include padding-2();  
+    }
+    .new{
+        background-color: hsl(180, 29%, 50%);
+        color: white;
+        border-radius: 20px;
+        @include padding-left-right-5();
+        @include padding-2();  
+    }
+    .jobDescription{
+        color: hsl(180, 29%, 50%);
+    }
+}
+.details{
+    display: flex;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: gray;
+    padding-bottom: 20px;
+    @include gap();
+    p{
+        opacity: 0.5;
+    }
+}
+.abilities{
+    @include flex-direction();
+    @include padding-left-right();
+    flex-wrap: wrap;
+    @include gap();
+    p{
+        color: hsl(180, 29%, 50%);
+        padding: 5px;
+        @include border-radius();
+    }
+    .languages{
+        @include flex-wrap();
+        @include gap();
+    }
+    .tools{
+        @include flex-wrap();
+        @include gap();
+    }
+    button{
+        background-color:   hsl(180, 31%, 95%);
+        border:none;
+        @include cursor-pointer();
+        @include border-radius();
+    }
+    button:hover{
+        background-color: hsl(180, 29%, 50%);
+        p{
+            color: hsl(180, 31%, 95%);
+        }
+    }
+}
+.option , .searchOptions {
+    @include font-weight();
+}
+@media screen and  (min-width:740px){  
+.cardMainNewFeatured{
+    @include flex-content();
+    flex-direction: row;
+    margin-right: 0;
+    .image-details{
+        @include flex-align();
+        flex-direction: row;
+    }
+}
+.cardMain{
+    @include flex-content();
+    flex-direction: row;
+    .image-details{
+        @include flex-align();
+        flex-direction: row;   
+    }
+}
+.details{
+    border: none;
+    p{
+        @include p-fontSize();
+    }
+}
+.image{
+    position:relative;
+    width: 90px;
+    height: 90px;
+}
+.abilities{
+    @include flex-align();
+    flex-direction: row;
+    flex-wrap: wrap;
+    .searchOptions {
+        height: 20%;
+    }
+}
+.headerDesktop{
+    display: block;
+}
+.headerMobile{
+    display: none;
+}
+}
+.option , .searchOptions {
+    @include btn-fontSize();
+}
+.job{
+    @include job-fontSize();
+}
+.jobDescription{
+    @include p-fontSize();
+}
+.title{
+    @include gap-20();
+}
+.clear{
+    @include btn-fontSize();
+    color:gray;
+    @include font-weight();
+}
+.clear:hover{
+    color: hsl(180, 29%, 50%);
+    text-decoration: solid;
+    text-decoration-line:underline;
+}
